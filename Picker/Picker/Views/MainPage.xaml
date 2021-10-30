@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Picker.Views.MainPage" 
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:Picker.ViewModels" xmlns:control="clr-namespace:Picker.Control" 
+             xmlns:IS.Toolkit="clr-namespace:IS.Toolkit.XamarinForms.Controls;assembly=IS.Toolkit.XamarinForms"
+             x:DataType="local:MainPageViewModel">
+
+    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+        <Label Text="Welcome to Xamarin Forms and Prism!" />
+        <control:PickerFix ItemsSource="{Binding PickerItems}" ItemDisplayBinding="{Binding Label}" SelectedItem="{Binding SelectedPickerItem, Mode=TwoWay}" ></control:PickerFix>
+        <!--<Picker ItemsSource="{Binding PickerItems}" ItemDisplayBinding="{Binding Name}" SelectedItem="{Binding SelectedPickerItem}" ></Picker>-->
+        <!--<IS.Toolkit:Picker ItemsSource="{Binding PickerItems}" SelectedItem="{Binding SelectedPickerItem}" ></IS.Toolkit:Picker>-->
+    </StackLayout>
+
+</ContentPage>
